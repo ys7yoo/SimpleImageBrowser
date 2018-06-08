@@ -226,6 +226,7 @@ if (isset($_GET['info'])) {
                 </div>
             </td>
             <td id="imagecontainer">
+                <?php echo $image ?>
                 <div style="position: relative;">
                     <?php
                     if ($currentIndex > 0) {
