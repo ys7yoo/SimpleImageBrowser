@@ -131,9 +131,9 @@ $neighbors = array_slice($images, $pagingStart, $config['paginginterval']);
     echo '<title>';
     echo $config['sitetitle'];
     if (isset($_GET['info'])) {
-        echo ' :: Info';
+        echo ' : Info';
     } elseif (!$startpage) {
-        echo ' :: ' . htmlspecialchars($image);
+        echo ' : ' . htmlspecialchars($image);
     }
     echo '</title>';
     
@@ -229,16 +229,19 @@ if (isset($_GET['info'])) {
                 <?php echo $image ?>
                 <div style="position: relative;">
                     <?php
+                    // previous image
                     if ($currentIndex > 0) {
                         $href = generateImageUrl($album, $images[$currentIndex - 1]);
                         echo "<a href=\"$href\" class=\"navi back\"></a>";
                     }
+                    // next image
                     if ($currentIndex + 1 < count($images)) {
                         $href = generateImageUrl($album, $images[$currentIndex + 1]);
                         echo "<a href=\"$href\" class=\"navi next\"></a>";
                     }
                     ?>
-                    <img src="<?php echo str_replace('%2F', '/', rawurlencode($directories[$album])) . '/' . rawurlencode($image); ?>" alt="Image" <?php if ($config['imageborder']) echo 'class="imageborder"'; ?> />
+                    <!-- current image   -->
+                    <img src="<?php echo str_replace('%2F', '/', rawurlencode($directories[$album])) . '/' . rawurlencode($image); ?>" alt="image" <?php if ($config['imageborder']) echo 'class="imageborder"'; ?> />
                 </div>
             </td>
         </tr>
