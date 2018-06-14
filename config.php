@@ -29,7 +29,22 @@ $config['autodetectroot'] = 'images';
  * Values: associative array with "Title" => "relative path"
  */
 $config['albums'] = array(
-    'MET' => 'joints'
+    'cooking' => 'joints/cooking',
+    'filing.seated' => 'joints/filing.seated',
+    'filing.stand' => 'joints/filing.stand',
+    'house cleaning' => 'joints/house cleaning',
+    'lifting' => 'joints/lifting',
+    'machine work.light' => 'joints/machine work.light',
+    'machine work.sawing' => 'joints/machine work.sawing',
+    'packing' => 'joints/packing',
+    'reading.seated' => 'joints/reading.seated',
+    'reclining' => 'joints/reclining',
+    'seated.quiet' => 'joints/seated.quiet',
+    'sleeping' => 'joints/sleeping',
+    'standing.relaxed' => 'joints/standing.relaxed',
+    'typing' => 'joints/typing',
+    'walking about' => 'joints/walking about',
+    'writing' => 'joints/writing'
 );
 
 

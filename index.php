@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-error_reporting(0);
+error_reporting(1);
 
 session_start();
 
